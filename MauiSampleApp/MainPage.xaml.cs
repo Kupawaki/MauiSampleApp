@@ -10,16 +10,17 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	private async void OnCounterClicked(object sender, EventArgs e)
 	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
+		bool answer = await DisplayAlert("I Have A Question:", "Isn't this neat?", "Yes", "No");
+		if(answer==true)
+		{
+			OutputLb.Text = "Answer was yes";
+		}
 		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		{
+            OutputLb.Text = "Answer was no";
+        }
 	}
 }
 

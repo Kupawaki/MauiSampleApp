@@ -35,6 +35,12 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
+            <Label
+                x:Name="OutputLb"
+                Text=""
+                FontSize="18"
+                HorizontalOptions="Center"/>
+
         </VerticalStackLayout>
     </ScrollView>
 
