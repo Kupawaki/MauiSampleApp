@@ -6,6 +6,7 @@ public partial class MainPage : ContentPage
 
 	public MainPage()
 	{
+		//Adding a comment to test the included git stuffs
 		InitializeComponent();
 	}
 
